@@ -130,8 +130,8 @@ CREATE TABLE `dict website`.` dt_posts` (
   `Register_ID` INT NULL,
   `No_Replies` INT NULL,
   PRIMARY KEY (`Post_ID`),
-  INDEX `Category_ID_idx` (`Category_ID` ASC) VISIBLE,
-  INDEX `Register_Post_idx` (`Register_ID` ASC) VISIBLE,
+  INDEX `Category_ID_idx` (`Category_ID` ASC),
+  INDEX `Register_Post_idx` (`Register_ID` ASC),
   CONSTRAINT `Category_ID`
     FOREIGN KEY (`Category_ID`)
     REFERENCES `dict website`.`dt_postcategory` (`Category_ID`)
@@ -159,8 +159,8 @@ CREATE TABLE `dict website`.` dt_reply` (
   `Register_ID` INT NOT NULL,
   `Rpy_Comment` MEDIUMTEXT NOT NULL,
   PRIMARY KEY (`Reply_ID`),
-  INDEX `Post_ID_idx` (`Post_ID` ASC) VISIBLE,
-  INDEX `Regisster_reply_idx` (`Register_ID` ASC) VISIBLE,
+  INDEX `Post_ID_idx` (`Post_ID` ASC),
+  INDEX `Regisster_reply_idx` (`Register_ID` ASC),
   CONSTRAINT `Post_ID`
     FOREIGN KEY (`Post_ID`)
     REFERENCES `dict website`.` dt_posts` (`Post_ID`)
