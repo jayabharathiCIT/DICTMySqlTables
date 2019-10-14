@@ -1,0 +1,43 @@
+1.Stored Procedure to add new post into dt_posts  table. 
+
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_AddPost`(
+  `P_Topic_Title` VARCHAR(80),
+  `P_Description_Post` VARCHAR(200),
+  `P_Category_ID` INT,
+  `P_Date_Posted` DATETIME(6),
+  `P_Register_ID` INT
+)
+BEGIN
+INSERT into `dict website`.`dt_posts`(Post_ID,Topic_Title,Description_Post,Category_ID,Date_Posted,Register_ID)
+ values (P_Post_ID,P_Topic_Title,P_Description_Post,P_Category_ID,P_Date_Posted,P_Register_ID);	END
+ 
+ 2. View all posts stored procedure
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_PostViewAll`()
+BEGIN
+	SELECT * FROM `dict website`.dt_posts;
+END
+
+3. Stored procedure “sp_FristNameByID”
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_FristNameByID`(
+`registerID` INT
+)
+BEGIN	
+    select `First_Name` from `dict website`.dt_dict_persons where Register_ID=registerID;
+END
+
+
+4.Stored procedure sp_AddReply
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_AddReply`(
+  `R_Reply_ID` INT,
+  `R_Post_ID` INT,
+  `R_Register_ID` INT,
+  `R_Rply_Comment` MEDIUMTEXT
+)
+BEGIN
+			INSERT into `dict website`.`dt_posts`(Reply_ID,Post_ID,Category_ID,Rpy_Comment)
+            values (R_Reply_ID,R_Post_ID,R_Register_ID,R_Rply_Comment);		
+END
+
+
