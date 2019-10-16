@@ -41,3 +41,13 @@ BEGIN
 END
 
 
+5.Stored procedure sp_CheckAuthUser
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_CheckAuthUser`(
+`F_Register_ID` INT,
+`F_Password` INT
+)
+BEGIN
+select  count(*) from `dict website`.dt_dict_persons where Register_ID=F_Register_ID and Password=F_Password;
+END
+
