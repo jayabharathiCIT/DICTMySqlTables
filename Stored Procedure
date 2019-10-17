@@ -26,7 +26,7 @@ BEGIN
     select `First_Name` from `dict website`.dt_dict_persons where Register_ID=registerID;
 END
 
-6. Create reply table
+4. Create reply table
 CREATE TABLE ` dt_reply` (
   `Reply_ID` int(11) NOT NULL AUTO_INCREMENT,
   `Post_ID` int(11) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE ` dt_reply` (
   CONSTRAINT `Register_reply` FOREIGN KEY (`Register_ID`) REFERENCES `dt_dict_persons` (`Register_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 )
 
-4.Stored procedure sp_AddReply
+5.Stored procedure sp_AddReply
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_AddReply`(
   `R_Post_ID` INT,
@@ -54,7 +54,7 @@ BEGIN
 END
 
 
-5.Stored procedure sp_CheckAuthUser
+6.Stored procedure sp_CheckAuthUser
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_CheckAuthUser`(
 `F_Register_ID` INT,
@@ -62,5 +62,15 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_CheckAuthUser`(
 )
 BEGIN
 select  count(*) from `dict website`.dt_dict_persons where Register_ID=F_Register_ID and Password=F_Password;
+END
+
+
+7.Stored procedure sp_CountReplies
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_CountReplies`(
+  `R_Post_ID` INT
+)
+BEGIN
+UPDATE `dict website`.`dt_posts` set No_Replies = (SELECT COUNT(*) FROM `dict website`.` dt_reply` WHERE Post_ID =R_Post_ID)  Where Post_ID = R_Post_ID;
 END
 
