@@ -1,0 +1,50 @@
+CREATE TABLE `dt_dict_persons` (
+  `Register_ID` int(11) NOT NULL,
+  `First_Name` varchar(20) NOT NULL,
+  `Last_Name` varchar(20) NOT NULL,
+  `Password` int(10) NOT NULL,
+  `Date_of_Birth` date NOT NULL,
+  `Email` varchar(80) NOT NULL,
+  `Date_Change_Password` datetime(6) NOT NULL,
+  PRIMARY KEY (`Register_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1'
+
+
+
+CREATE TABLE `dt_reply` (
+  `Reply_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Post_ID` int(11) NOT NULL,
+  `Register_ID` int(11) NOT NULL,
+  `Rpy_Comment` mediumtext NOT NULL,
+  `Reply_Date` datetime(6) NOT NULL,
+  PRIMARY KEY (`Reply_ID`),
+  KEY `Post_ID_idx` (`Post_ID`),
+  KEY `Register_reply_idx` (`Register_ID`),
+  CONSTRAINT `Post_ID` FOREIGN KEY (`Post_ID`) REFERENCES `dt_posts` (`Post_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `Register_reply` FOREIGN KEY (`Register_ID`) REFERENCES `dt_dict_persons` (`Register_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1'
+
+
+CREATE TABLE `dt_posts` (
+  `Post_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Topic_Title` varchar(80) NOT NULL,
+  `Description_Post` varchar(200) NOT NULL,
+  `Category_ID` int(11) NOT NULL,
+  `Date_Posted` datetime(6) NOT NULL,
+  `Register_ID` int(11) DEFAULT NULL,
+  `No_Replies` int(11) DEFAULT NULL,
+  PRIMARY KEY (`Post_ID`),
+  KEY `Category_ID_idx` (`Category_ID`),
+  KEY `Register_Post_idx` (`Register_ID`),
+  CONSTRAINT `Category_ID` FOREIGN KEY (`Category_ID`) REFERENCES `dt_postcategory` (`Category_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `Register_Post` FOREIGN KEY (`Register_ID`) REFERENCES `dt_dict_persons` (`Register_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1
+
+
+CREATE TABLE `dt_postcategory` (
+  `Category_ID` int(11) NOT NULL,
+  `Category_Name` varchar(20) NOT NULL,
+  PRIMARY KEY (`Category_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
