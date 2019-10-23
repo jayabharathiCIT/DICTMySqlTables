@@ -49,7 +49,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_AddReply`(
   `R_Reply_Date` DateTime(6)
 )
 BEGIN
-			INSERT into `dict website`.` dt_reply`(Post_ID,Register_ID,Rpy_Comment,Reply_Date)
+			INSERT into `dict website`.`dt_reply`(Post_ID,Register_ID,Rpy_Comment,Reply_Date)
             values (R_Post_ID,R_Register_ID,R_Rply_Comment,R_Reply_Date);		
 END
 
