@@ -104,4 +104,28 @@ BEGIN
 UPDATE `dict website`.`dt_posts` SET `Topic_Title` = P_Topic_Title, `Description_Post` = P_Description_Post ,  `Category_ID` = P_Category_ID , `Date_Posted`=P_Date_Posted  where `Post_ID` = P_Post_ID;
 END
 
+11.Stored Procedure sp_Register
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_Register`(
+  `P_Register_ID` int(11),
+  `P_First_Name` VARCHAR(20),
+  `P_Last_Name` VARCHAR(20),
+  `P_Password` INT(10),
+  `P_Date_of_Birth` DATE,
+  `P_Email` VARCHAR(80),
+  `P_Date_Change_Password` DATETIME(6)
+)
+BEGIN
+INSERT into `dict website`.`dt_dict_persons`(Register_ID,First_Name,Last_Name,Password,Date_of_Birth,Email,Date_Change_Password)
+ values (P_Register_ID,P_First_Name,P_Last_Name,P_Password,P_Date_of_Birth,P_Email,P_Date_Change_Password);	END
+
+
+12. Stored Procedure sp_CheckPassword
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_CheckPassword`(
+  `P_Register_ID` int(11),
+  `P_Password` INT(10),
+  `P_Date_Change_Password` DATETIME(6)
+)
+BEGIN
+select Register_ID ,Password,Date_Change_Password from `dict website`.dt_dict_persons where Register_ID = P_Register_ID and Password = P_Password;
+ END
 
