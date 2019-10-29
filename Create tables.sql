@@ -190,5 +190,13 @@ CREATE TABLE `dict website`.`dt_announcement_id` (
     ON UPDATE NO ACTION);
 
 
-
+CREATE TABLE `dict website`.`dt_dict_admin` (
+`Register_ID` INT NOT NULL,
+`First_Name` VARCHAR(20) NOT NULL,
+`Last_Name` VARCHAR(20) NOT NULL,
+`Password` INT(10) NOT NULL,
+`Date_of_Birth` DATE NOT NULL,
+`Email` VARCHAR(80) NOT NULL,
+`Date_Change_Password` DATETIME(6) NOT NULL,
+  PRIMARY KEY (`Register_ID`));
 
