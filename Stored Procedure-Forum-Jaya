@@ -91,16 +91,7 @@ UPDATE `dict website`.`dt_posts` set No_Replies = (SELECT COUNT(*) FROM `dict we
 END
 
 
-8.Stored procedure sp_CountReplies
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_CountReplies`(
-  `R_Post_ID` INT
-)
-BEGIN
-UPDATE `dict website`.`dt_posts` set No_Replies = (SELECT COUNT(*) FROM `dict website`.` dt_reply` WHERE Post_ID =R_Post_ID)  Where Post_ID = R_Post_ID;
-END
-
-9.Stored Procedure sp_WhoCreatedPost
+8.Stored Procedure sp_WhoCreatedPost
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_WhoCreatedPost`(
 `P_Register_ID` INT,
 `P_Post_ID` INT)
@@ -108,7 +99,7 @@ BEGIN
 select  count(*) from `dict website`.dt_posts where Register_ID=P_Register_ID and Post_ID=P_Post_ID;
 END
 
-10.Stored Procedure sp_EditPost
+9.Stored Procedure sp_EditPost
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_EditPost`(
  `P_Topic_Title` VARCHAR(80),
   `P_Description_Post` VARCHAR(200),
@@ -120,7 +111,7 @@ BEGIN
 UPDATE `dict website`.`dt_posts` SET `Topic_Title` = P_Topic_Title, `Description_Post` = P_Description_Post ,  `Category_ID` = P_Category_ID , `Date_Posted`=P_Date_Posted  where `Post_ID` = P_Post_ID;
 END
 
-11.Stored Procedure sp_Register
+10.Stored Procedure sp_Register
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_Register`(
   `P_Register_ID` int(11),
   `P_First_Name` VARCHAR(20),
@@ -135,7 +126,7 @@ INSERT into `dict website`.`dt_dict_persons`(Register_ID,First_Name,Last_Name,Pa
  values (P_Register_ID,P_First_Name,P_Last_Name,P_Password,P_Date_of_Birth,P_Email,P_Date_Change_Password);	END
 
 
-12. Stored Procedure sp_CheckPassword
+11. Stored Procedure sp_CheckPassword
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_CheckPassword`(
   `P_Register_ID` int(11),
   `P_Password` INT(10)
