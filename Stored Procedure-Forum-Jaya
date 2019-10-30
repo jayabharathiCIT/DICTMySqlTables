@@ -23,7 +23,16 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_FristNameByID`(
 `registerID` INT
 )
 BEGIN	
-    select `First_Name` from `dict website`.dt_dict_persons where Register_ID=registerID;
+DECLARE personRole varchar(15);
+
+    IF EXISTS (select `First_Name` from `dict website`.dt_dict_persons where Register_ID=registerID)
+    then
+    set personRole ='Student';
+    select `First_Name` , personRole AS Roles from `dict website`.dt_dict_persons where Register_ID=registerID;
+    else
+    set personRole ='Admin';
+     select `First_Name` , personRole AS Roles from `dict website`.dt_dict_admin where Register_ID=registerID;
+	END IF;
 END
 
 4. Create reply table
@@ -61,7 +70,14 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_CheckAuthUser`(
 `F_Password` INT
 )
 BEGIN
-select  count(*) from `dict website`.dt_dict_persons where Register_ID=F_Register_ID and Password=F_Password;
+DECLARE AucthPersonCount INT;
+SELECT COUNT(*) INTO AucthPersonCount  from `dict website`.dt_dict_persons where Register_ID=F_Register_ID and Password=F_Password;
+IF (AucthPersonCount > 0)
+Then
+     select count(*) from `dict website`.dt_dict_persons where Register_ID=F_Register_ID and Password=F_Password;
+ELSE 
+  select count(*) from `dict website`.dt_dict_admin where Register_ID=F_Register_ID and Password=F_Password;
+END IF;
 END
 
 
