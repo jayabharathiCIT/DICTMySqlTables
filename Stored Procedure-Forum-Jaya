@@ -146,3 +146,12 @@ BEGIN
     where Register_ID = P_Register_ID;		
 END
 
+13. Stored Procedure sp_ForgetPassword
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_ForgetPassword`(
+  `P_Register_ID` int(11),
+  `P_Email` INT(10)
+)
+BEGIN
+select Register_ID ,Email from `dict website`.dt_dict_persons where Register_ID = P_Register_ID and Email = P_Email;
+ END
+
