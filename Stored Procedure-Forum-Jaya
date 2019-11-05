@@ -87,7 +87,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_CountReplies`(
   `R_Post_ID` INT
 )
 BEGIN
-UPDATE `dict website`.`dt_posts` set No_Replies = (SELECT COUNT(*) FROM `dict website`.` dt_reply` WHERE Post_ID =R_Post_ID)  Where Post_ID = R_Post_ID;
+UPDATE `dict website`.`dt_posts` set No_Replies = (SELECT COUNT(*) FROM `dict website`.`dt_reply` WHERE Post_ID =R_Post_ID)  Where Post_ID = R_Post_ID;
 END
 
 
