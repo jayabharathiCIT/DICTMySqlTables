@@ -135,15 +135,14 @@ BEGIN
 select Register_ID ,Password from `dict website`.dt_dict_persons where Register_ID = P_Register_ID and Password = P_Password;
  END
  
- 12. Stored Procedure sp_CheckPassword
+ 12. Stored Procedure sp_PasswordChange
  CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_PasswordChange`(
   `P_Register_ID` int(11),
   `P_Password` INT(10),
   `P_Date_Change_Password` DATETIME(6)
 )
 BEGIN
-	update  `dict website`.`dt_dict_persons` set Password = P_Password, Date_Change_Password = P_Date_Change_Password 
-    where Register_ID = P_Register_ID;		
+update  `dict website`.`dt_dict_persons` set Password = P_Password, Date_Change_Password = P_Date_Change_Password where Register_ID = P_Register_ID;		
 END
 
 13. Stored Procedure sp_ForgetPassword
@@ -155,3 +154,14 @@ BEGIN
 select Register_ID ,Email from `dict website`.dt_dict_persons where Register_ID = P_Register_ID and Email = P_Email;
  END
 
+14. Stored Procedure sp_StatusForgetPassword
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_StatusForgetPassword`(
+  `P_Register_ID` int(11),
+  `P_Email` VARCHAR(80),
+  `P_ForgetPassword` char(4)
+)
+BEGIN
+update`dict website`.`dt_dict_persons`
+set ForgetPassword = P_ForgetPassword
+where Register_ID = P_Register_ID and Email = P_Email;	
+END
