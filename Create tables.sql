@@ -9,6 +9,7 @@ CREATE TABLE `dict website`.`dt_dict_persons` (
   `Date_of_Birth` DATE NOT NULL,
  `Email` VARCHAR(80) NOT NULL,
 `Date_Change_Password` DATETIME(6) NOT NULL,
+`ForgetPassword`CHAR(3),
   PRIMARY KEY (`Register_ID`));
 
 -- 2.	Data table name: dt_News
