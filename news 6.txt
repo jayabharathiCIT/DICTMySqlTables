@@ -1,0 +1,18 @@
+Title
+Surgeries delayed after Victorian hospitals suffer cyber attack
+
+Category 2:
+
+Source
+https://www.9news.com.au/
+
+
+Content:
+One of Australia's top spy agencies is investigating a cyber attack that has sent regional Victorian hospital networks into lockdown, delaying surgeries.
+Hospitals that are a part of the Gippsland Health Alliance and South West Alliance of Rural Health have been targeted by ransomware.
+The facilities have isolated and disconnected a number of systems to quarantine the infection, as federal and Victorian authorities investigate.
+
+The team includes the Australian Cyber Security Centre, part of the secretive Signals Directorate, alongside Victoria and Federal Police.
+"At this time, we have no information to indicate that patient data has been compromised," David Cullen, principal advisor to the Victorian government on cyber incidents told reporters.
+"This will be a long, complex and protracted forensic investigation."
+Mr Cullen could not say if it would take weeks or months to get the systems running again and why the two hospital networks were targeted, but no other government departments had been harmed.

@@ -1,0 +1,32 @@
+Title:
+
+Wireless noise protocol can extend IoT range
+
+Date: 2019-11-01
+Category 1
+
+Source: https://www.networkworld.com/article/3449217/as-the-internet-turns-50-experts-weigh-future-advances-and-emerging-issues.html  
+
+Content
+
+The effective range of Wi-Fi, and other wireless communications used in Internet of Things networks could be increased significantly by adding wireless noise, say scientists.
+ 
+ This counter-intuitive solution could extend the range of an off-the-shelf Wi-Fi radio by 73 yards, a group led by Brigham Young University says. Wireless noise, a disturbance in the signal, is usually unwanted.
+ The remarkably simple concept sends wireless noise-energy over-the-top of Wi-Fi data traffic in an additional, unrelated channel. That second channel, or carrier, which is albeit at a much lower data rate than the native Wi-Fi, travels further, and when encoded can be used to ping a sensor, say, to find out if the device is alive when the Wi-Fi link itself may have lost association through distance-caused, poor handshaking.
+ The independent, additional noise channel travels further than the native Wi-Fi. “It works beyond the range of Wi-Fi,” the scientists say in their paper.
+ 
+ Applications could be found in hard-to-reach sensor locations where the sensor might still be usefully collecting data, just be offline on the network through an iffy Wi-Fi link. Ones-and-zeroes can be encoded in the add-on channel to switch sensors on and off too.
+ How it works
+ The on-off noise power communication (ONPC) protocol, as it’s called, works via a software hack on commodity Wi-Fi access points. Through software, part of the transmitter is converted to an RF power source, and then elements in the receiver are turned into a power measuring device. Noise energy, created by the power source is encoded, emitted and picked up by the measuring setup at the other end.
+ 
+ “If the access point, [or] router hears this code, it says, ‘OK, I know the sensor is still alive and trying to reach me, it’s just out of range,’” Neal Patwari of Washington University says in a Brigham Young University (BYU) press release. “It’s basically sending one bit of information that says it’s alive.”
+ 
+ The noise channel is much leaner than the Wi-Fi one, BYU explains. “While Wi-Fi requires speeds of at least one megabit per second to maintain a signal, ONPC can maintain a signal on as low as one bit per second—one millionth of the data speed required by Wi-Fi.” That’s enough for IoT sensor housekeeping, conceivably. Additionally, “one bit of information is sufficient for many Wi-Fi enabled devices that simply need an on [and] off message,” the school says. It uses the example of an irrigation system.
+ 
+ Assuring up-time, though, in hard-to-reach, dynamic environments, is where the school got the idea from. Researchers found that they were continually implementing sensors for environmental IoT experiments in hard to reach spots.
+ 
+ The team use an example of a sensor placed in a student’s bedroom where the occupant had placed a laundry basket in front of the important device. It had blocked the native Wi-Fi signal. The scientists, then, couldn’t get a site appointment for some weeks due to the vagaries of the subject student’s life, and they didn’t know if the trouble issue was sensor or link during that crucial time. ONPC would have allowed them to be reassured that data was still being collected and stored—or not—without the tricky-to-obtain site visit.
+ 
+ The researchers reckon cellular, Bluetooth and also LoRa could use ONPC, too. “We can send and receive data regardless of what Wi-Fi is doing; all we need is the ability to transmit energy and then receive noise measurements,” Phil Lundrigan of BYU says.
+ 
+ Join the Network World communities on Facebook and LinkedIn to comment on topics that are top of mind.

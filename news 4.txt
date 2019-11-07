@@ -1,0 +1,16 @@
+title
+Your Cloud and Data Management Strategies are About to Collide
+
+Category 1
+Source:
+https://www.networkcomputing.com/
+
+Content
+
+Global professional services firm Deloitte recently published a report asking whether data modernization is driving cloud adoption or vice versa. Deloitte defines "data modernization" as moving from legacy databases to modern databases that can handle unstructured data.
+ 
+ According to the report, "data modernization efforts offer substantial cost savings over previously used data management strategies." A lot of the cost savings come from cloud databases, which provide the usual cloud benefits plus lower database-related overhead.
+ 
+ As Deloitte points out, cloud providers offer a lot more than storage and compute these days, they also offer modern databases and analytics capabilities that take advantage of AI. While data warehouses aren't going away anytime soon, businesses are doing more in the cloud than ever and the trend will continue.
+ 
+ "This year, more respondents placed a higher premium on AI to drive business results, specifically with AI automation," said Chris Jackson, private company technology leader at Deloitte. "Predictive analytics and legacy modernization are two of the top investment priorities. The companies using predictive analytics to forecast business results or customer behavior has jumped 65% percent over the last five years."

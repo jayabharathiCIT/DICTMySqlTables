@@ -1,0 +1,28 @@
+Title: Government raises threat level on 'undetectable' email virus
+
+Source: https://www.9news.com.au/
+
+categry: 2
+
+Contents:
+Australians are being warned over an ongoing malware campaign capable of stealing banking logins, financial data, and even emptying cryptocurrency wallets.
+The sophisticated banking trojan, known as Emotet, can also go undetected by antivirus software and can forward itself to every email contact of a victim, increasing the likelihood of further infection.
+First detected in Europe in 2014, the banking trojan has recently been infiltrating Australian inboxes via emails from compromised accounts.
+
+
+The body of the email directs the recipient to open a Word attachment or PDF - usually in the form of a statement, agreement or invoice.
+As the emails are sent from hijacked email accounts, the recipients may feel safe to click on any links or documents as they appear to have come from a trusted contact.
+Once the document s opened, the payload in the attachment executes and gives hackers access to the victim's computer. It also makes systems vulnerable to ransomware injections.
+In response to the scale of the campaign, the national Cyber Incident Management Arrangements (CIMA) has increased the threat to a "Level 3: Aler
+
+The CIMA helps coordinate the government's response to national cyber incidents, with incidents ranging from "Level 5: Normal Conditions" to "Level 1: National Cyber Crisis".
+Level 3 falls under the "significant cyber incident" category as it can have "major impact" to services, information, assets and government reputation.
+Australian Cyber Security Centre head Rachel Noble said the malware has been targeting Australian businesses and individuals.
+"The ACSC is working closely with state and territory governments to limit the spread of this computer virus and to provide technical advice and assistance and to support organisations that are affected," she said.
+"If Emotet infects your computer, it will open up a backdoor that will allow the cybercriminal to inject ransomware that could freeze your network."
+Ms Noble urged victims to not pay ransom.
+"There is no guarantee that paying the ransom will fix your computer, and it could make you vulnerable to further attacks. Restore your files from backup and seek technical advice," she said.
+The ACSC recommends taking the following steps immediately to prevent infection:
+Disable Microsoft Office macros. (Macros are small programs used to automate simple tasks in Microsoft Office documents but can be used maliciously) 
+Maintain firewalls
+Make sure you have an offline backup of your information
