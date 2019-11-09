@@ -6,6 +6,7 @@ CREATE TABLE `dt_dict_persons` (
   `Date_of_Birth` date NOT NULL,
   `Email` varchar(80) NOT NULL,
   `Date_Change_Password` datetime(6) NOT NULL,
+  `ForgetPassword`CHAR(3),
   PRIMARY KEY (`Register_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1'
 
