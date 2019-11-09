@@ -9,8 +9,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_AddPost`(
   `P_Register_ID` INT
 )
 BEGIN
-INSERT into `dict website`.`dt_posts`(Post_ID,Topic_Title,Description_Post,Category_ID,Date_Posted,Register_ID)
- values (P_Post_ID,P_Topic_Title,P_Description_Post,P_Category_ID,P_Date_Posted,P_Register_ID);	END
+INSERT into `dict website`.`dt_posts`(Topic_Title,Description_Post,Category_ID,Date_Posted,Register_ID)
+ values (P_Topic_Title,P_Description_Post,P_Category_ID,P_Date_Posted,P_Register_ID);	END
  
  2. View all posts stored procedure
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_PostViewAll`()
