@@ -1,3 +1,10 @@
+Order to create tables:
+1.Person
+2.Post Category
+3.Post
+4.Reply
+5.Admin
+
 CREATE TABLE `dt_dict_persons` (
   `Register_ID` int(11) NOT NULL,
   `First_Name` varchar(20) NOT NULL,
