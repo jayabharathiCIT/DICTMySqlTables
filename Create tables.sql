@@ -1,4 +1,6 @@
 -- Create Table
+SET GLOBAL FOREIGN_KEY_CHECKS=0;
+
 
 -- 1. Database name : Dt_dict_Persons
 CREATE TABLE `dict website`.`dt_dict_persons` (
@@ -170,7 +172,7 @@ CREATE TABLE `dict website`.` dt_reply` (
   CONSTRAINT `Regisster_reply`
     FOREIGN KEY (`Register_ID`)
     REFERENCES `dict website`.`dt_dict_persons` (`Register_ID`)
-    ON DELETE NO ACTION
+     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
 
