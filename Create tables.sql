@@ -123,7 +123,7 @@ CREATE TABLE `dict website`.`dt_courses` (
 -- 9.	Datatable name : Dt_Posts
 
 CREATE TABLE `dict website`.` dt_posts` (
-  `Post_ID` INT NOT NULL,
+  `Post_ID` INT NOT NULL AUTO_INCREMENT,
   `Topic_Title` VARCHAR(80) NOT NULL,
   `Description_Post` VARCHAR(200) NOT NULL,
   `Category_ID` INT NOT NULL,
@@ -155,7 +155,7 @@ CREATE TABLE `dict website`.`dt_postcategory` (
 -- 11.	 Datatable name : Dt_Reply
 
 CREATE TABLE `dict website`.` dt_reply` (
-  `Reply_ID` INT NOT NULL,
+  `Reply_ID` INT NOT NULL AUTO_INCREMENT ,
   `Post_ID` INT NOT NULL,
   `Register_ID` INT NOT NULL,
   `Rpy_Comment` MEDIUMTEXT NOT NULL,
@@ -177,7 +177,7 @@ CREATE TABLE `dict website`.` dt_reply` (
 -- 12.	 Data table name: Dt_Announcement_ID
 
 CREATE TABLE `dict website`.`dt_announcement_id` (
-  `Announcement_ID` INT NOT NULL,
+  `Announcement_ID` INT NOT NULL AUTO_INCREMENT,
   `Register_ID` INT NOT NULL,
   `Ann_Title` VARCHAR(80) NOT NULL,
   `Ann_Body` MEDIUMTEXT NOT NULL,
