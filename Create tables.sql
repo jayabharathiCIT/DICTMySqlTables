@@ -64,7 +64,7 @@ CREATE TABLE `dict website`.`dt_book_event` (
   INDEX `Register_ID_idx` (`Register_ID` ASC) VISIBLE,
   CONSTRAINT `Evt_ID`
     FOREIGN KEY (`Evt_ID`)
-    REFERENCES `dict website`.`  dt_event` (`Evt_ID`)
+    REFERENCES `dict website`.`dt_event` (`Evt_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `Register_ID`
@@ -118,7 +118,7 @@ CREATE TABLE `dict website`.`dt_courses` (
   INDEX `Unit_ID_idx` (`Unit_ID` ASC) VISIBLE,
   CONSTRAINT `Unit_ID`
     FOREIGN KEY (`Unit_ID`)
-    REFERENCES `dict website`.` dt_units` (`Unit_ID`)
+    REFERENCES `dict website`.`dt_units` (`Unit_ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
