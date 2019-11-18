@@ -1,0 +1,14 @@
+--CREATE TABLE ANNOUNCEMENT
+
+dt_announcement_id	CREATE TABLE `dt_announcement` (
+  `Announcement_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Register_ID` int(11) NOT NULL,
+  `Ann_Title` varchar(80) NOT NULL,
+  `Ann_Body` mediumtext NOT NULL,
+  `Posted_On` datetime(6) NOT NULL,
+  PRIMARY KEY (`Announcement_ID`),
+  KEY `Register_ID_Ann_idx` (`Register_ID`),
+  CONSTRAINT `Register_ID_Ann` FOREIGN KEY (`Register_ID`) REFERENCES `dt_dict_persons` (`Register_ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1
+
+--
