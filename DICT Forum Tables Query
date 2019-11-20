@@ -17,6 +17,7 @@ INSERT INTO `dict website`.`dt_postcategory` (`Category_ID`,`Category_Name`) VAL
 
 
 Insert value into persons datatable
+
 INSERT INTO `dict website`.`dt_dict_persons` (`Register_ID`,`First_Name`, `Last_Name`, `Password`,`Date_of_Birth`,`Email`,`Date_Change_Password`)VALUES (244332,'Jayabharathi','Sankarappan','244332','1990-08-16','jayabharathi_san@yahoo.com',"2019-09-25 02:55:05");
 INSERT INTO `dict website`.`dt_dict_persons` (`Register_ID`,`First_Name`, `Last_Name`, `Password`,`Date_of_Birth`,`Email`,`Date_Change_Password`)VALUES (229037,'Gerardo','Macano','229037','1989-07-02','gmacana@gmail.com',"2019-10-23 11:27:05");
 INSERT INTO `dict website`.`dt_dict_persons` (`Register_ID`,`First_Name`, `Last_Name`, `Password`,`Date_of_Birth`,`Email`,`Date_Change_Password`)VALUES (080599,'Preeyanuch','Chaiban','080599','1988-03-01','S.Preeyanuch20@gmail.com',"2019-10-23 11:30:00");
